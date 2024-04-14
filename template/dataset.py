@@ -62,5 +62,5 @@ if __name__ == '__main__':
     mnist_dataset = MNIST(data_dir, data_type)
     image, label = mnist_dataset[0]
 
-    print("Image shape:", image.shape)
-    print("Label:", label)
+    print("Image shape :", image.shape)
+    print("Label :", label)

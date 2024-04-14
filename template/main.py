@@ -103,6 +103,7 @@ def main():
         5) cost function: use torch.nn.CrossEntropyLoss
 
     """
+
     # write your codes here
     # 1) Dataset objects for training and test datasets
     dataset_train = dataset.MNIST(data_directory, "train")
