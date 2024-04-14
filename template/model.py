@@ -77,3 +77,4 @@ if __name__ == '__main__' :
     summary(model1, (1,28,28))
     summary(model2, (1,28,28))
     
+    

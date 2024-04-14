@@ -127,7 +127,7 @@ def main():
     # train & test
     train_acc_all, train_loss_all, test_acc_all, test_loss_all = [], [], [], []
     
-    print(f" ===== 📍 Applying model : {model_name} ===== ")
+    print(f" ==== 📍 Applying model : {model_name} ==== ")
     for epoch in range(1,EPOCHS+1) :
         train_loss, train_acc = train(model, dataloader_train, device, criterion, optimizer)
         test_loss, test_acc = test(model, dataloader_test, device, criterion)
