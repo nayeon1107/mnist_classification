@@ -1,7 +1,6 @@
 __pycache__/
 
 *.png
+/*.png
 *.tar
 *.pickle
-
-/*.png

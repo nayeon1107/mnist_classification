@@ -60,7 +60,7 @@ if __name__ == '__main__':
     data_dir = "/home/user/Desktop/na/mnist-classification/data"
     data_type = "train"
     mnist_dataset = MNIST(data_dir, data_type)
-    image, label = mnist_dataset[1]
+    image, label = mnist_dataset[0]
 
     print("Image shape:", image.shape)
     print("Label:", label)

@@ -76,3 +76,4 @@ if __name__ == '__main__' :
     model2 = CustomMLP()
     summary(model1, (1,28,28))
     summary(model2, (1,28,28))
+    
