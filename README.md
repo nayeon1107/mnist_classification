@@ -44,8 +44,11 @@
 &nbsp;
 #### 🔍 Compare LeNet5(base) & LeNet5(L2 norm) : weight decay = 0.001
 ![LeNet with L2](https://github.com/nayeon1107/mnist_classification/assets/88521667/aaecb9da-4cbe-4df9-8225-c8b075f00595)
+&nbsp;
+#### 🔍 Compare LeNet5(base) & LeNet5(Dropout) : dropout = 0.5
+![LeNet with Dropout](https://github.com/nayeon1107/mnist_classification/assets/88521667/450f3a17-3f20-4ff4-9837-8e0a59b63c3a)
 
-
+---
 
 패키지 다운로드
 ```python
