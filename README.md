@@ -1,4 +1,4 @@
-# (2024-1) 인공신경망과 딥러닝 1차 과제 - MNIST Classification
+# MNIST Classification
 
 ## 📚 파일 구조
 ```bash
