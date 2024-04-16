@@ -16,19 +16,24 @@ class LeNet5(nn.Module):
         super(LeNet5, self).__init__()
         self.layer1 = nn.Sequential(
             nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5),
+            # nn.BatchNorm2d(6),  # BatchNormalization
             nn.ReLU(),
             nn.MaxPool2d(2)
         )
         self.layer2 = nn.Sequential(
             nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5),
+            # nn.BatchNorm2d(16),  # BatchNormalization
             nn.ReLU(),
             nn.MaxPool2d(2)
         )
+        self.layer3 = nn.Sequential(
+            nn.Conv2d(in_channels=16, out_channels=120, kernel_size=4),
+            # nn.BatchNorm2d(120),  # BatchNormalization
+            nn.ReLU()
+        )
         self.fclayer1 = nn.Sequential(
-            nn.Linear(256,120),
-            # torch.nn.Dropout(0.5)
             nn.Linear(120,84),
-            nn.ReLU(),
+            nn.ReLU()
             # torch.nn.Dropout(0.5)
         )
         self.fclayer2 = nn.Sequential(
@@ -39,6 +44,7 @@ class LeNet5(nn.Module):
         # write your codes here
         img = self.layer1(img)
         img = self.layer2(img)
+        img = self.layer3(img)
         img = torch.flatten(img,1)
         img = self.fclayer1(img)
         output = self.fclayer2(img)
@@ -72,7 +78,9 @@ class CustomMLP(nn.Module):
 
 
 if __name__ == '__main__' :
+
     model1 = LeNet5()
     model2 = CustomMLP()
+    
     summary(model1, (1,28,28))
     summary(model2, (1,28,28))
